@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Alert, Label, TextInput, Button, Spinner } from 'flowbite-react';
 
 function SignUp() {
@@ -31,13 +31,15 @@ function SignUp() {
       });
       const data = await res.json();
       console.log('Sign-up response:', data);
-      if (!data.success) {
-        setErrorMessage(data.message);
+      if (data.success === false) {
+        return setErrorMessage(data.message);
       }
       setLoading(false);
+      if(res.ok) {
+        navigate('/sign-in');
+      }
     } catch (error) {
-      console.error('Sign-up error:', error);
-      setErrorMessage('An error occurred during sign-up.');
+      setErrorMessage(error.message);
       setLoading(false);
     }
   };
@@ -86,8 +88,8 @@ function SignUp() {
                 onChange={handleChange}
               />
             </div>
-            <Button
-              gradientDuoTone='purpleToPink'
+            <Button outline
+              gradientDuoTone='purpleToBlue'
               type='submit'
               disabled={loading}
             >
