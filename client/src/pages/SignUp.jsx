@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Alert, Label, TextInput, Button, Spinner } from 'flowbite-react';
+import OAuth from '../components/OAuth.jsx'
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -10,7 +11,7 @@ function SignUp() {
   });
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
   };
@@ -102,6 +103,7 @@ function SignUp() {
                 'Sign Up'
               )}
             </Button>
+            <OAuth />
           </form>
           <div className='flex gap-2 text-sm mt-5'>
             <span>Have an account</span>

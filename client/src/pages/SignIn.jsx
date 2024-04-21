@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Alert, Label, TextInput, Button, Spinner } from 'flowbite-react';
+import OAuth from '../components/OAuth.jsx'
+import { useDispatch } from 'react-redux';
 
 export default function SignIn() {
   const [formData, setFormData] = useState({
@@ -11,6 +13,7 @@ export default function SignIn() {
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
   };
@@ -51,8 +54,8 @@ export default function SignIn() {
         {/* left */}
         <div className='flex-1'>
           <Link to='/' className='font-bold dark:text-white text-4xl'>
-            <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
-              Sahand's
+            <span className='px-2 py-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg text-white'>
+              Sinclair's
             </span>
             Blog
           </Link>
@@ -83,8 +86,8 @@ export default function SignIn() {
                 onChange={handleChange}
               />
             </div>
-            <Button
-              gradientDuoTone='purpleToPink'
+            <Button outline
+              gradientDuoTone='purpleToBlue'
               type='submit'
               disabled={loading}
             >
@@ -97,6 +100,7 @@ export default function SignIn() {
                 'Sign In'
               )}
             </Button>
+            <OAuth />
           </form>
           <div className='flex gap-2 text-sm mt-5'>
             <span>Dont Have an account?</span>

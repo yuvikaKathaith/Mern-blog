@@ -8,7 +8,7 @@ export default function Header() {
     const path = useLocation().pathname;
   return (
     <Navbar className='border-b-2'>
-      <Link to="/" className="self-center whitespace-nowrap text-sm sm:text-xl font-semibold text-gray-800 dark:text-white">
+      <Link to="/" className="self-center whitespace-nowrap text-sm sm:text-xl font-bold text-gray-800 dark:text-white">
         <span className="px-2 py-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg text-white">
           Sinclair's 
         </span>Blog
