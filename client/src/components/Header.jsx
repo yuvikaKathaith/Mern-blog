@@ -77,11 +77,6 @@ export default function Header() {
             </Button>
           </Link>
         )}
-        <Link to='/sign-in' className='hidden sm:inline'>
-            <Button outline gradientDuoTone='purpleToBlue'>
-                Sign In
-            </Button>
-        </Link>
         <Navbar.Toggle/>
       </div>
       <Navbar.Collapse>
