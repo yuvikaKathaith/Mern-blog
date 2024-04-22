@@ -8,16 +8,12 @@ export default function About() {
           </h1>
           <div className='text-md text-gray-500 flex flex-col gap-6'>
             <p>
-              Welcome to Yuvika's Blog! This blog was created by Yuvika Kathaith
-              as a personal project to share her thoughts and ideas with the
-              world.
+            As a Sophomore student, I am deeply passionate about web development. I am currently focused on mastering JavaScript and learning React to further enhance my abilities in creating dynamic and interactive web applications.
             </p>
 
             <p>
-              On this blog, you'll find weekly articles and tutorials on topics
-              such as web development, software engineering, and programming
-              languages. Yuvika is always learning and exploring new
-              technologies, so be sure to check back often for new content!
+            I am committed to staying updated with the latest trends and technologies in the field of web development. I actively seek opportunities to expand my knowledge and skills through online courses, tutorials, and practical projects. My goal is to build a solid foundation in front-end development and eventually explore full-stack development.
+            I am excited to apply my skills and contribute to innovative projects while continuing to grow as a web developer.
             </p>
 
             <p>
