@@ -24,6 +24,7 @@ export default function CreatePost() {
 
   const handleUpdloadImage = async () => {
     try {
+      console.log('Starting image upload...');
       if (!file) {
         setImageUploadError('Please select an image');
         return;
@@ -53,6 +54,7 @@ export default function CreatePost() {
         }
       );
     } catch (error) {
+      console.error('Image upload failed:', error);
       setImageUploadError('Image upload failed');
       setImageUploadProgress(null);
       console.log(error);
