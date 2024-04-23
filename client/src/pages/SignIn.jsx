@@ -55,7 +55,7 @@ export default function SignIn() {
         <div className='flex-1'>
           <Link to='/' className='font-bold dark:text-white text-4xl'>
             <span className='px-2 py-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg text-white'>
-              Sinclair's
+              Yuvika's
             </span>
             Blog
           </Link>
